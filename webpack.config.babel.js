@@ -1,5 +1,4 @@
 import { resolve } from 'path';
-import CopyPlugin from 'copy-webpack-plugin';
 import HtmlPlugin from 'html-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
@@ -26,9 +25,6 @@ const plugins = [
   }),
   new HtmlPlugin({
     template: './src/index.html'
-  }),
-  new CopyPlugin({
-    patterns: [{ from: 'src/main/icon.png', to: 'icon.png' }]
   })
 ];
 
